@@ -23,25 +23,24 @@ class Solution(object):
         j=1
         count=0
         for i in range(0,len(s)):
-            print('i:',i)
-            print('len(s)',len(s))
-            print('max',max)
+##            print('i:',i)
+##            print('len(s)',len(s))
+##            print('max',max)
             count=1
             m=0
             for j in range(i+1,len(s)):
                 for m in range(i,j):
-                    print('i=',i,'   j=',j,'   count',count,'    m',m)
+##                    print('i=',i,'   j=',j,'   count',count,'    m',m)
                     if (s[m] != s[j]):
                         count+=1 
                     else:
                         count=1
+                        i=m+1
                         break
-            
+
                 if(count>max):
                     max=count
                 count=1
-                
-
         return max
 
 if __name__=='__main__':
@@ -50,11 +49,13 @@ if __name__=='__main__':
         print (i)
     print('abc')
     print("aab---------=",Solution().lengthOfLongestSubstring("aab"))
-##    print("abcabcbb---------=",Solution().lengthOfLongestSubstring("abcabcbb"))
-##    print("bbbbb---------=",Solution().lengthOfLongestSubstring("bbbbb"))
-##    print("pwwkew---------=",Solution().lengthOfLongestSubstring("pwwkew"))
-##    print("au---------=",Solution().lengthOfLongestSubstring("au"))
-##    print("bwf---------=",Solution().lengthOfLongestSubstring("bwf"))
-##    print("dvdf---------=",Solution().lengthOfLongestSubstring("dvdf"))
-##    print("aa---------=",Solution().lengthOfLongestSubstring("aa"))
+    print("abcabcbb---------=",Solution().lengthOfLongestSubstring("abcabcbb"))
+    print("bbbbb---------=",Solution().lengthOfLongestSubstring("bbbbb"))
+    print("pwwkew---------=",Solution().lengthOfLongestSubstring("pwwkew"))
+    print("au---------=",Solution().lengthOfLongestSubstring("au"))
+    print("bwf---------=",Solution().lengthOfLongestSubstring("bwf"))
+    print("dvdf---------=",Solution().lengthOfLongestSubstring("dvdf"))
+    print("dvdf---------=",Solution().lengthOfLongestSubstring("sguishzlcvfqlwpiyiiutakxrnmtndmhkgqcqrpuoxlzvchukrqftaclnpecuqjeybjqtalhzyhvcq"))
+    
+    print("aa---------=",Solution().lengthOfLongestSubstring("aa"))
     
