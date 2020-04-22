@@ -248,7 +248,7 @@ int LeetCode::leetcode16(vector<int>& nums, int target)
 {
 	if (nums.size()<3)
 	{
-		return;
+		return 0;
 	}
 	int m=INT_MAX;
 	int n=0;

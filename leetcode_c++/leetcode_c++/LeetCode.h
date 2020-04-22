@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include<algorithm>
 using std::vector;
 using std::string;
+
 class LeetCode
 {
 public:
