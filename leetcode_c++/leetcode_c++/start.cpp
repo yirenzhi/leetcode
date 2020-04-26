@@ -1,5 +1,6 @@
 #include<iostream>
 #include"199.BinaryTreeRightSideView.h"
+#include"21.MergeTwoSortedLists.h"
 using namespace std;
 #define add(a,b) a+b
 #define A(x) return Solution##x
@@ -12,6 +13,10 @@ Solution* createSolutin(int num)
 			return new Solution199;
 		}
 		break;
+		case 21:
+		{
+			return new Solution21;
+		}
 		default:
 			break;
 	}

@@ -32,5 +32,8 @@
     <ClInclude Include="199.BinaryTreeRightSideView.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="21.MergeTwoSortedLists.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
