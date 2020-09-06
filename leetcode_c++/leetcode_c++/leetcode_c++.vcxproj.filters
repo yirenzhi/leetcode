@@ -38,5 +38,8 @@
     <ClInclude Include="102.BinaryTreeLevelOrderTraversal.h">
       <Filter>源文件</Filter>
     </ClInclude>
+    <ClInclude Include="107_BinaryTreeLevelOrderTraversal_II.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
