@@ -57,7 +57,7 @@ public:
 		root->left->right = new TreeNode(7);
 
 		vector<vector<int>> vecNum;
-		vecNum = levelOrder(root);
+		vecNum = levelOrderBottom(root);
 
 		
 		for (size_t i = 0; i < vecNum.size(); i++)

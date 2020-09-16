@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{19ADE853-37D6-48E6-8EBD-70FBB852BEC4}</ProjectGuid>
     <RootNamespace>leetcodec</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -119,11 +119,12 @@
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="102.BinaryTreeLevelOrderTraversal.h" />
-    <ClInclude Include="107_BinaryTreeLevelOrderTraversal_II.h" />
-    <ClInclude Include="199.BinaryTreeRightSideView.h" />
-    <ClInclude Include="21.MergeTwoSortedLists.h" />
     <ClInclude Include="base.h" />
+    <ClInclude Include="code1-100\21.MergeTwoSortedLists.h" />
+    <ClInclude Include="code1-100\46_Permutations.h" />
+    <ClInclude Include="code100-200\102.BinaryTreeLevelOrderTraversal.h" />
+    <ClInclude Include="code100-200\107_BinaryTreeLevelOrderTraversal_II.h" />
+    <ClInclude Include="code100-200\199.BinaryTreeRightSideView.h" />
     <ClInclude Include="LeetCode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
