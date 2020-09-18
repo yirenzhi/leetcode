@@ -50,5 +50,11 @@
     <ClInclude Include="code1-100\46_Permutations.h">
       <Filter>源文件\code1-100</Filter>
     </ClInclude>
+    <ClInclude Include="code1-100\47_PermutationsII.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
+    <ClInclude Include="code1-100\39_CombinationSum.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

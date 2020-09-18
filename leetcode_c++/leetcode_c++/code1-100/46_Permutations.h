@@ -33,13 +33,13 @@ public:
 			return res;
 		}
 
-		stack<int> path;
+		vector<int> path;
 		vector<bool> used(len,false);
 		dfs(nums, len, 0, path, used, res);
 		return res;
 	}
 
-	void dfs(vector<int> nums, int len,int depth, stack<int> path,vector<bool> used, vector<vector<int>>& res) {
+	void dfs(vector<int> nums, int len,int depth, vector<int>& path,vector<bool>& used, vector<vector<int>>& res) {
 		//最初是的dfs仅仅包含
 		//for循环下的 dfs(nums, len, depth + 1, path, used, res);
 		//depth用来记录进行的层级判断是否结束
@@ -49,7 +49,7 @@ public:
 		if (len==depth)
 		{
 			//
-			res.push_back(queueToVector(path));
+			res.push_back(path);
 			return;
 		}
 		//未加used，为A排列，数量为len的len次方，加了used后为阶乘
@@ -67,9 +67,9 @@ public:
 				continue;
 			}
 			used[i] = true;
-			path.push(nums[i]);
+			path.emplace_back(nums[i]);
 			dfs(nums, len, depth + 1, path, used, res);
-			path.pop();
+			path.pop_back();
 			used[i] = false;
 
 		}
@@ -78,26 +78,58 @@ public:
 
 	}
 
-	vector<int> queueToVector(stack<int> path)
-	{
-		vector<int> vec;
-		while (!path.empty()) {
-			vec.push_back(path.top());
-			path.pop();
+
+	void backtrack(vector<vector<int>>& res, vector<int>& output, int first, int len) {
+		if (first==len)
+		{
+			res.emplace_back(output);
+			return;
 		}
-		reverse(vec.begin(), vec.end());
-		return vec;
+		for (size_t i = first; i < len; i++)
+		{
+
+			swap(output[i], output[first]);
+			cout << "swap before:";
+			for (size_t j = 0; j <= first; j++)
+			{
+				cout << output[j] << "  ";
+			}
+			cout << endl;
+			backtrack(res, output, first+1, len);
+			swap(output[i], output[first]);
+			cout << "swap end:   " ;
+			for (size_t j = 0; j < first; j++)
+			{
+				cout << output[j] << "  ";
+			}
+			cout << endl;
+
+
+
+		}
+
 	}
+
+	vector<vector<int>> permute2(vector<int>& nums) {
+		vector<vector<int> > res;
+		sort(nums.begin(),nums.end());
+		backtrack(res, nums, 0, (int)nums.size());
+		return res;
+
+
+	}
+
 
 
 	void test()
 	{
-		vector<int> nums{ 1,2,3};
+		vector<int> nums{ 0,1,0,0,9};
 		vector<vector<int>> res = permute(nums);
 		for (size_t i = 0; i < res.size(); i++)
 		{
 			for (int j = 0; j < res[i].size(); j++)
 			{
+
 				cout << res[i][j] << "  ";
 			}
 			cout << endl;
