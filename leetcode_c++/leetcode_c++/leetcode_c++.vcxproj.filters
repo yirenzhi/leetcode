@@ -56,5 +56,17 @@
     <ClInclude Include="code1-100\39_CombinationSum.h">
       <Filter>源文件\code1-100</Filter>
     </ClInclude>
+    <ClInclude Include="code1-100\40_CombinationSumII.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
+    <ClInclude Include="code1-100\77_Combinations.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
+    <ClInclude Include="code1-100\78_Subsets.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
+    <ClInclude Include="code1-100\90_SubsetsII.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

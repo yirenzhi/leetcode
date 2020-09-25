@@ -8,8 +8,8 @@ public:
 	virtual void test()
 	{
 		//vector<int> nums{ 1,1,3 };
-		vector<int> nums{ 2,3,5 };
-		vector<vector<int>> res = combinationSum2(nums,8);
+		vector<int> nums{ 2,3,6,7 };
+		vector<vector<int>> res = combinationSum3(nums,7);
 		for (size_t i = 0; i < res.size(); i++)
 		{
 			for (int j = 0; j < res[i].size(); j++)
@@ -20,6 +20,51 @@ public:
 			cout << endl;
 		}
 	}
+
+	//题解方法
+	void dfs3(vector<int> nums,int begin, int target, vector<int>& path, vector<vector<int>>& res)
+	{
+		if (target==0)
+		{
+			res.emplace_back(path);
+			return;
+		}
+		for (int i = begin; i < nums.size(); i++)
+		{
+			if (target-nums[i]<0)
+			{
+				break;
+			}
+			//if (path.size()>0&&path[path.size()-1]>nums[i])
+			//{
+			//	continue;
+			//}
+			path.emplace_back(nums[i]);
+			cout << "递归之前 => "; 
+			for (int k = 0; k < path.size(); k++)
+			{
+				cout << path[k] << " ";
+			}
+			cout<< "，剩余 = " << target - nums[i] << endl;
+			dfs3(nums, i, target - nums[i], path, res);
+			path.pop_back();
+			cout << "递归之后 => ";
+			for (int k = 0; k < path.size(); k++)
+			{
+				cout << path[k] << " ";
+			}
+			cout << endl;
+		}
+	}
+
+	vector<vector<int>> combinationSum3(vector<int>& candidates, int target) {
+		sort(candidates.begin(), candidates.end());
+		vector<vector<int>> ans;
+		vector<int> combine;
+		dfs3(candidates,0, target, combine, ans);
+		return ans;
+	}
+
 
 	//官方解法
 	void dfs2(vector<int>& candidates, int target, vector<vector<int>>& ans, vector<int>& combine, int idx) {

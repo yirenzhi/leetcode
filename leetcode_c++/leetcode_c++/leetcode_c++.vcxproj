@@ -122,8 +122,12 @@
     <ClInclude Include="base.h" />
     <ClInclude Include="code1-100\21.MergeTwoSortedLists.h" />
     <ClInclude Include="code1-100\39_CombinationSum.h" />
+    <ClInclude Include="code1-100\40_CombinationSumII.h" />
     <ClInclude Include="code1-100\46_Permutations.h" />
     <ClInclude Include="code1-100\47_PermutationsII.h" />
+    <ClInclude Include="code1-100\77_Combinations.h" />
+    <ClInclude Include="code1-100\78_Subsets.h" />
+    <ClInclude Include="code1-100\90_SubsetsII.h" />
     <ClInclude Include="code100-200\102.BinaryTreeLevelOrderTraversal.h" />
     <ClInclude Include="code100-200\107_BinaryTreeLevelOrderTraversal_II.h" />
     <ClInclude Include="code100-200\199.BinaryTreeRightSideView.h" />
