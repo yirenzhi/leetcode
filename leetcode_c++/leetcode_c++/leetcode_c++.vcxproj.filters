@@ -19,6 +19,27 @@
     <Filter Include="源文件\code100-200">
       <UniqueIdentifier>{00eee4c6-7802-4700-a15f-9faf8bd6964e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\code201-300">
+      <UniqueIdentifier>{30601309-6d6b-4a94-a162-971b64ee005a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code301-400">
+      <UniqueIdentifier>{b8d5f848-fa29-43e1-8b51-ffe4c51eb30e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code401-500">
+      <UniqueIdentifier>{391b81b4-8780-41f3-bbd9-c8a3e6eb38b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code501-600">
+      <UniqueIdentifier>{b9feacff-6c50-40ff-b969-02e4d3737da7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code601-700">
+      <UniqueIdentifier>{eeaeebf7-2566-401b-b5e1-7da38f13382e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code701-800">
+      <UniqueIdentifier>{5134a75b-43ab-4b7e-b605-e899e5442f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\code801-900">
+      <UniqueIdentifier>{30dbc125-5a8f-460d-a2ae-93a1193d5e68}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="start.cpp">
@@ -67,6 +88,15 @@
     </ClInclude>
     <ClInclude Include="code1-100\90_SubsetsII.h">
       <Filter>源文件\code1-100</Filter>
+    </ClInclude>
+    <ClInclude Include="code801-900\876_MiddleoftheLinkedList.h">
+      <Filter>源文件\code801-900</Filter>
+    </ClInclude>
+    <ClInclude Include="code201-300\206_ReverseLinkedList.h">
+      <Filter>源文件\code201-300</Filter>
+    </ClInclude>
+    <ClInclude Include="code100-200\143_ReorderList.h">
+      <Filter>源文件\code100-200</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -27,6 +27,39 @@ struct ListNode {
 	ListNode(int x) : val(x), next(NULL) {}
 	
 };
+void printList(ListNode* head)
+{
+	while (head != NULL)
+	{
+		cout << head->val << "  ";
+		head = head->next;
+	}
+	cout << endl;
+}
+ListNode* ListNodeCreate(vector<int> nums)
+{
+	if (nums.size()==0)
+	{
+		return NULL;
+	}
+	ListNode* node1=NULL;
+	ListNode* node2=NULL ;
+	for (size_t i = 0; i < nums.size(); i++)
+	{
+		ListNode* temp = new ListNode(nums[i]);
+		if (i==0)
+		{
+			node1 = temp;
+			node2 = temp;
+		}
+		else
+		{
+			node1->next = temp;
+			node1 = temp;
+		}
+	}
+	return node2;
+}
 
 class Solution
 {

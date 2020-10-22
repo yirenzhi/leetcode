@@ -12,8 +12,10 @@
 #include"code1-100/90_SubsetsII.h"
 #include"code100-200/102.BinaryTreeLevelOrderTraversal.h"
 #include"code100-200/107_BinaryTreeLevelOrderTraversal_II.h"
+#include"code100-200/143_ReorderList.h"
 #include"code100-200/199.BinaryTreeRightSideView.h"
-
+#include"code201-300/206_ReverseLinkedList.h"
+#include"code801-900/876_MiddleoftheLinkedList.h"
 using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
@@ -83,7 +85,13 @@ Solution* createSolutin(int num)
 	case 102:
 	{return new Solution102;}break;
 	case 107:
-	{return new Solution107;}break;
+	{return new Solution107; }break;
+	case 143:
+	{return new Solution143; }break;
+	case 206:
+	{return new Solution206; }break;
+	case 876:
+	{return new Solution876; }break;
 	default:
 		break;
 	}
