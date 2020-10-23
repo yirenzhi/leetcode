@@ -133,6 +133,7 @@
     <ClInclude Include="code100-200\143_ReorderList.h" />
     <ClInclude Include="code100-200\199.BinaryTreeRightSideView.h" />
     <ClInclude Include="code201-300\206_ReverseLinkedList.h" />
+    <ClInclude Include="code201-300\234_PalindromeLinkedList.h" />
     <ClInclude Include="code801-900\876_MiddleoftheLinkedList.h" />
     <ClInclude Include="LeetCode.h" />
   </ItemGroup>

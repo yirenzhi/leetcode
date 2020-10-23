@@ -98,5 +98,8 @@
     <ClInclude Include="code100-200\143_ReorderList.h">
       <Filter>源文件\code100-200</Filter>
     </ClInclude>
+    <ClInclude Include="code201-300\234_PalindromeLinkedList.h">
+      <Filter>源文件\code201-300</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

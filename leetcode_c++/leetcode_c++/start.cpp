@@ -15,6 +15,7 @@
 #include"code100-200/143_ReorderList.h"
 #include"code100-200/199.BinaryTreeRightSideView.h"
 #include"code201-300/206_ReverseLinkedList.h"
+#include"code201-300/234_PalindromeLinkedList.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
 using namespace std;
 using namespace chrono;
@@ -90,6 +91,8 @@ Solution* createSolutin(int num)
 	{return new Solution143; }break;
 	case 206:
 	{return new Solution206; }break;
+	case 234:
+	{return new Solution234; }break;
 	case 876:
 	{return new Solution876; }break;
 	default:
