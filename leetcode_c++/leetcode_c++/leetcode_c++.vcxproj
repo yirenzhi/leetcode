@@ -119,6 +119,7 @@
     <ClCompile Include="start.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="1301-1400\1365_HowManyNumbersAreSmallerThantheCurrentNumber.h" />
     <ClInclude Include="base.h" />
     <ClInclude Include="code1-100\21.MergeTwoSortedLists.h" />
     <ClInclude Include="code1-100\39_CombinationSum.h" />

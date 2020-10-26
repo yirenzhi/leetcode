@@ -17,6 +17,7 @@
 #include"code201-300/206_ReverseLinkedList.h"
 #include"code201-300/234_PalindromeLinkedList.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
+#include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
 using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
@@ -95,6 +96,8 @@ Solution* createSolutin(int num)
 	{return new Solution234; }break;
 	case 876:
 	{return new Solution876; }break;
+	case 1365:
+	{return new Solution1365; }break;
 	default:
 		break;
 	}

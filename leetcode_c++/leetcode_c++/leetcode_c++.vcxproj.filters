@@ -40,6 +40,9 @@
     <Filter Include="源文件\code801-900">
       <UniqueIdentifier>{30dbc125-5a8f-460d-a2ae-93a1193d5e68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\1301-1400">
+      <UniqueIdentifier>{8fa88745-abf9-4075-82f7-827539d03dd2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="start.cpp">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="code201-300\234_PalindromeLinkedList.h">
       <Filter>源文件\code201-300</Filter>
+    </ClInclude>
+    <ClInclude Include="1301-1400\1365_HowManyNumbersAreSmallerThantheCurrentNumber.h">
+      <Filter>源文件\1301-1400</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
