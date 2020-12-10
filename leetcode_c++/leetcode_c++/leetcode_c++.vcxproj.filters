@@ -110,5 +110,8 @@
     <ClInclude Include="code401-500\463_IslandPerimeter.h">
       <Filter>源文件\code401-500</Filter>
     </ClInclude>
+    <ClInclude Include="code801-900\860_LemonadeChange.h">
+      <Filter>源文件\code801-900</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -17,6 +17,7 @@
 #include"code201-300/206_ReverseLinkedList.h"
 #include"code201-300/234_PalindromeLinkedList.h"
 #include"code401-500/463_IslandPerimeter.h"
+#include"code801-900/860_LemonadeChange.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
 #include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
 using namespace std;
@@ -67,40 +68,24 @@ Solution* createSolutin(int num)
 
 	}
 	break;
-	case 39:
-	{return new Solution39; }break;
-	case 40:
-	{return new Solution40; }break;
-	case 46:
-	{return new Solution46; }break;
-	case 47:
-	{return new Solution47; }break;
-	case 77:
-	{return new Solution77; }break;
-	case 78:
-	{return new Solution78; }break;
-	case 90:
-	{return new Solution90; }break;
-	case 199:
-	{return new Solution199;}break;
-	case 21:
-	{return new Solution21;}break;
-	case 102:
-	{return new Solution102;}break;
-	case 107:
-	{return new Solution107; }break;
-	case 143:
-	{return new Solution143; }break;
-	case 206:
-	{return new Solution206; }break;
-	case 234:
-	{return new Solution234; }break;
-	case 463:
-	{return new Solution463; }break;
-	case 876:
-	{return new Solution876; }break;
-	case 1365:
-	{return new Solution1365; }break;
+	case 21: {return new Solution21; }break;
+	case 39:{return new Solution39; }break;
+	case 40:{return new Solution40; }break;
+	case 46:{return new Solution46; }break;
+	case 47:{return new Solution47; }break;
+	case 77:{return new Solution77; }break;
+	case 78:{return new Solution78; }break;
+	case 90:{return new Solution90; }break;
+	case 102:{return new Solution102; }break;
+	case 107:{return new Solution107; }break;
+	case 143:{return new Solution143; }break;
+	case 199:{return new Solution199; }break;
+	case 206:{return new Solution206; }break;
+	case 234:{return new Solution234; }break;
+	case 463:{return new Solution463; }break;
+	case 860:{return new Solution860; }break;
+	case 876:{return new Solution876; }break;
+	case 1365:{return new Solution1365; }break;
 	default:
 		break;
 	}
