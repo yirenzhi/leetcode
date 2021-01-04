@@ -17,9 +17,12 @@
 #include"code201-300/206_ReverseLinkedList.h"
 #include"code201-300/234_PalindromeLinkedList.h"
 #include"code401-500/463_IslandPerimeter.h"
+#include"code501-600/509_FibonacciNumber.h"
 #include"code801-900/860_LemonadeChange.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
 #include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
+#include <sstream>
+
 using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
@@ -82,7 +85,8 @@ Solution* createSolutin(int num)
 	case 199:{return new Solution199; }break;
 	case 206:{return new Solution206; }break;
 	case 234:{return new Solution234; }break;
-	case 463:{return new Solution463; }break;
+	case 463: {return new Solution463; }break;
+	case 509: {return new Solution509; }break;
 	case 860:{return new Solution860; }break;
 	case 876:{return new Solution876; }break;
 	case 1365:{return new Solution1365; }break;
@@ -92,8 +96,11 @@ Solution* createSolutin(int num)
 	return NULL;
 }
 
+
 int main()
 {
+	long aa = 1000;
+	cout << Solution1365::anyToString(aa) << endl;
 	while (true)
 	{
 		cout << "请输入题目编号,输入0跳出循环" << endl;

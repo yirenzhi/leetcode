@@ -113,5 +113,8 @@
     <ClInclude Include="code801-900\860_LemonadeChange.h">
       <Filter>源文件\code801-900</Filter>
     </ClInclude>
+    <ClInclude Include="code501-600\509_FibonacciNumber.h">
+      <Filter>源文件\code501-600</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

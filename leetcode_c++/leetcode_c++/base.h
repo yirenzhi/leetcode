@@ -4,6 +4,8 @@
 #include<queue>
 #include<stack>
 #include<map>
+#include <sstream>
+
 using namespace std;
 
 struct TreeNode {

@@ -40,6 +40,8 @@ public:
 		printVector(nums);
 
 	}
+	template<class T>
+	static std::string anyToString(T a);
 
 private:
 	//O(n) ±º‰∏¥‘”∂»
@@ -111,3 +113,14 @@ private:
 
 
 };
+
+
+template<class T>
+std::string Solution1365::anyToString(T a)
+{
+	std::ostringstream oss;
+	oss.str("");
+	oss.clear();
+	oss << a;
+	return oss.str();
+}
