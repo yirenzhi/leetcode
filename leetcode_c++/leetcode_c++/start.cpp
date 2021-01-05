@@ -20,6 +20,7 @@
 #include"code501-600/509_FibonacciNumber.h"
 #include"code801-900/860_LemonadeChange.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
+#include"code801-900/830_PositionsofLargeGroups.h"
 #include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
 #include <sstream>
 
@@ -87,7 +88,8 @@ Solution* createSolutin(int num)
 	case 234:{return new Solution234; }break;
 	case 463: {return new Solution463; }break;
 	case 509: {return new Solution509; }break;
-	case 860:{return new Solution860; }break;
+	case 830: {return new Solution830; }break;
+	case 860: {return new Solution860; }break;
 	case 876:{return new Solution876; }break;
 	case 1365:{return new Solution1365; }break;
 	default:
