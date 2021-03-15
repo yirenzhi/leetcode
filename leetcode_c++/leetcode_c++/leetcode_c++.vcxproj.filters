@@ -119,5 +119,14 @@
     <ClInclude Include="code801-900\830_PositionsofLargeGroups.h">
       <Filter>源文件\code801-900</Filter>
     </ClInclude>
+    <ClInclude Include="code100-200\189_RotateArray.h">
+      <Filter>源文件\code100-200</Filter>
+    </ClInclude>
+    <ClInclude Include="code100-200\121_BestTimetoBuyandSellStock.h">
+      <Filter>源文件\code100-200</Filter>
+    </ClInclude>
+    <ClInclude Include="code1-100\54_SpiralMatrix.h">
+      <Filter>源文件\code1-100</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
