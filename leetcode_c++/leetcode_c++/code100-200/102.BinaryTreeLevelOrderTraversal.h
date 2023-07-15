@@ -1,5 +1,5 @@
 #pragma once
-#include "base.h"
+#include "../base.h"
 
 
 //102. ¶ş²æÊ÷µÄ²ãĞò±éÀú

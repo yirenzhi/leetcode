@@ -1,6 +1,6 @@
 #pragma once
 #pragma once
-#include "base.h"
+#include "../base.h"
 
 
 //107. 二叉树的层序遍历  后倒叙

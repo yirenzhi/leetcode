@@ -2,6 +2,7 @@
 #include <ctime>
 #include <chrono>
 #include"LeetCode.h"
+#include "code1-100/19_RemoveNthFromEnd.h"
 #include "code1-100/21.MergeTwoSortedLists.h"
 #include"code1-100/39_CombinationSum.h"
 #include"code1-100/40_CombinationSumII.h"
@@ -36,6 +37,7 @@ Solution* createSolutin(int num)
 {
 	switch (num)
 	{
+	case 19: {return new Solution19; }break;
 	case 21: {return new Solution21; }break;
 	case 39:{return new Solution39; }break;
 	case 40:{return new Solution40; }break;
