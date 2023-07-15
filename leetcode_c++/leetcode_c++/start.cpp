@@ -33,7 +33,7 @@ using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
 #define A(x) return Solution##x
-Solution* createSolutin(int num)
+Solution* createSolution(int num)
 {
 	switch (num)
 	{
@@ -124,7 +124,7 @@ int main()
 		{
 			break;
 		}
-		Solution* sol = createSolutin(tag);
+		Solution* sol = createSolution(tag);
 		if (sol)
 		{
 			auto start = system_clock::now();
