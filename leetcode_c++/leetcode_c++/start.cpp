@@ -33,6 +33,7 @@ using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
 #define A(x) return Solution##x
+
 Solution* createSolution(int num)
 {
 	switch (num)
