@@ -32,13 +32,15 @@
 using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
-#define A(x) return Solution##x
-
+#define A(x)  Solution##x()
+using std::cout;
 Solution* createSolution(int num)
 {
+	// return new A(num);
 	switch (num)
 	{
-	case 19: {return new Solution19; }break;
+	// case 19: {return new Solution19(); }break;
+	case 19: {return new A(19); }break;
 	case 21: {return new Solution21; }break;
 	case 39:{return new Solution39; }break;
 	case 40:{return new Solution40; }break;
@@ -69,7 +71,7 @@ Solution* createSolution(int num)
 }
 
 
-//Ìí¼ÓÆÁ±Î×Ö
+//æ·»åŠ å±è”½å­—
 void addPingBi()
 {
 	vector<string> strs;
@@ -116,9 +118,12 @@ int main()
 
 	//long aa = 1000;
 	//cout << Solution1365::anyToString(aa) << endl;
+
+	std::cout<< "a" "b"<<std::endl;
+
 	while (true)
 	{
-		cout << "ÇëÊäÈëÌâÄ¿±àºÅ,ÊäÈë0Ìø³öÑ­»·" << endl;
+		cout << "è¯·è¾“å…¥é¢˜ç›®ç¼–å·,è¾“å…¥0è·³å‡ºå¾ªç¯" << endl;
 		int tag;
 		cin >> tag;
 		if (tag==0)
@@ -132,19 +137,19 @@ int main()
 			sol->test();
 			auto end = system_clock::now();
 			auto duration = duration_cast<microseconds>(end - start);
-			cout << "±¾´ÎÖ´ĞĞ»¨·Ñ£º"
+			cout << "æœ¬æ¬¡æ‰§è¡ŒèŠ±è´¹ï¼š"
 				<< double(duration.count()) * microseconds::period::num / microseconds::period::den
-				<< "Ãë" << endl;
+				<< "ç§’" << endl;
 
 			//clock_t start = clock();
 			//sol->test();
 			//clock_t end = clock();
-			//cout << "±¾´ÎÖ´ĞĞ»¨·Ñ£º" << (double)(end - start) / CLOCKS_PER_SEC << "Ãë¡£" << endl;
+			//cout << "æœ¬æ¬¡æ‰§è¡ŒèŠ±è´¹ï¼š" << (double)(end - start) / CLOCKS_PER_SEC << "ç§’ã€‚" << endl;
 
 		}
 		else
 		{
-			cout << "±àºÅ²»´æÔÚ" << endl;
+			cout << "ç¼–å·ä¸å­˜åœ¨" << endl;
 		}
 	}
 
