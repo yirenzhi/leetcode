@@ -250,21 +250,21 @@ int LeetCode::leetcode16(vector<int>& nums, int target)
 	{
 		return 0;
 	}
-	int m=INT_MAX;
+	// int m=INT_MAX;
 	int n=0;
-	for (unsigned int i=0;i<nums.size();i++)
-	{
-		for (unsigned int j=i+1;j<nums.size();j++)
-		{
-			for (unsigned int z=j+1;z<nums.size();z++)
-			{
-				if (abs(nums[i]+nums[j]+nums[z]-target)<m)
-				{
-					m=abs(nums[i]+nums[j]+nums[z]-target);
-					n=nums[i]+nums[j]+nums[z];
-				}
-			}
-		}
-	}
+	// for (unsigned int i=0;i<nums.size();i++)
+	// {
+	// 	for (unsigned int j=i+1;j<nums.size();j++)
+	// 	{
+	// 		for (unsigned int z=j+1;z<nums.size();z++)
+	// 		{
+	// 			if (abs(nums[i]+nums[j]+nums[z]-target)<m)
+	// 			{
+	// 				m=abs(nums[i]+nums[j]+nums[z]-target);
+	// 				n=nums[i]+nums[j]+nums[z];
+	// 			}
+	// 		}
+	// 	}
+	// }
 	return n;
 }

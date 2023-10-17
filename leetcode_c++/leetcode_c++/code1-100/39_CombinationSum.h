@@ -21,7 +21,7 @@ public:
 		}
 	}
 
-	//Ìâ½â·½·¨
+	//é¢˜è§£æ–¹æ³•
 	void dfs3(vector<int> nums,int begin, int target, vector<int>& path, vector<vector<int>>& res)
 	{
 		if (target==0)
@@ -40,15 +40,15 @@ public:
 			//	continue;
 			//}
 			path.emplace_back(nums[i]);
-			cout << "µİ¹éÖ®Ç° => "; 
+			cout << "é€’å½’ä¹‹å‰ => "; 
 			for (int k = 0; k < path.size(); k++)
 			{
 				cout << path[k] << " ";
 			}
-			cout<< "£¬Ê£Óà = " << target - nums[i] << endl;
+			cout<< "ï¼Œå‰©ä½™ = " << target - nums[i] << endl;
 			dfs3(nums, i, target - nums[i], path, res);
 			path.pop_back();
-			cout << "µİ¹éÖ®ºó => ";
+			cout << "é€’å½’ä¹‹å => ";
 			for (int k = 0; k < path.size(); k++)
 			{
 				cout << path[k] << " ";
@@ -66,7 +66,7 @@ public:
 	}
 
 
-	//¹Ù·½½â·¨
+	//å®˜æ–¹è§£æ³•
 	void dfs2(vector<int>& candidates, int target, vector<vector<int>>& ans, vector<int>& combine, int idx) {
 		if (idx == candidates.size()) {
 			return;
@@ -75,9 +75,9 @@ public:
 			ans.emplace_back(combine);
 			return;
 		}
-		// Ö±½ÓÌø¹ı
+		// ç›´æ¥è·³è¿‡
 		dfs2(candidates, target, ans, combine, idx + 1);
-		// Ñ¡Ôñµ±Ç°Êı
+		// é€‰æ‹©å½“å‰æ•°
 		if (target - candidates[idx] >= 0) {
 			combine.emplace_back(candidates[idx]);
 			dfs2(candidates, target - candidates[idx], ans, combine, idx);
@@ -94,7 +94,7 @@ public:
 
 
 
-	//×Ô¼º½â·¨
+	//è‡ªå·±è§£æ³•
 	int m_target;
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
 		m_target = target;
@@ -156,25 +156,25 @@ public:
 };
 
 /*
-¸ø¶¨Ò»¸öÎŞÖØ¸´ÔªËØµÄÊı×é candidates ºÍÒ»¸öÄ¿±êÊı target £¬ÕÒ³ö candidates ÖĞËùÓĞ¿ÉÒÔÊ¹Êı×ÖºÍÎª target µÄ×éºÏ¡£
-candidates ÖĞµÄÊı×Ö¿ÉÒÔÎŞÏŞÖÆÖØ¸´±»Ñ¡È¡¡£
+ç»™å®šä¸€ä¸ªæ— é‡å¤å…ƒç´ çš„æ•°ç»„ candidates å’Œä¸€ä¸ªç›®æ ‡æ•° target ï¼Œæ‰¾å‡º candidates ä¸­æ‰€æœ‰å¯ä»¥ä½¿æ•°å­—å’Œä¸º target çš„ç»„åˆã€‚
+candidates ä¸­çš„æ•°å­—å¯ä»¥æ— é™åˆ¶é‡å¤è¢«é€‰å–ã€‚
 
-ËµÃ÷£º
+è¯´æ˜ï¼š
 
-ËùÓĞÊı×Ö£¨°üÀ¨ target£©¶¼ÊÇÕıÕûÊı¡£
-½â¼¯²»ÄÜ°üº¬ÖØ¸´µÄ×éºÏ¡£
-Ê¾Àı 1£º
+æ‰€æœ‰æ•°å­—ï¼ˆåŒ…æ‹¬ targetï¼‰éƒ½æ˜¯æ­£æ•´æ•°ã€‚
+è§£é›†ä¸èƒ½åŒ…å«é‡å¤çš„ç»„åˆã€‚
+ç¤ºä¾‹ 1ï¼š
 
-ÊäÈë£ºcandidates = [2,3,6,7], target = 7,
-ËùÇó½â¼¯Îª£º
+è¾“å…¥ï¼šcandidates = [2,3,6,7], target = 7,
+æ‰€æ±‚è§£é›†ä¸ºï¼š
 [
   [7],
   [2,2,3]
 ]
-Ê¾Àı 2£º
+ç¤ºä¾‹ 2ï¼š
 
-ÊäÈë£ºcandidates = [2,3,5], target = 8,
-ËùÇó½â¼¯Îª£º
+è¾“å…¥ï¼šcandidates = [2,3,5], target = 8,
+æ‰€æ±‚è§£é›†ä¸ºï¼š
 [
   [2,2,2,2],
   [2,3,3],

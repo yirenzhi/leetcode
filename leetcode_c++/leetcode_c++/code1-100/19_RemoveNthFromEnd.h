@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../base.h"
-//½«Á½¸öÉýÐòÁ´±íºÏ²¢ÎªÒ»¸öÐÂµÄÉýÐòÁ´±í²¢·µ»Ø¡£ÐÂÁ´±íÊÇÍ¨¹ýÆ´½Ó¸ø¶¨µÄÁ½¸öÁ´±íµÄËùÓÐ½Úµã×é³ÉµÄ¡£
+//å°†ä¸¤ä¸ªå‡åºé“¾è¡¨åˆå¹¶ä¸ºä¸€ä¸ªæ–°çš„å‡åºé“¾è¡¨å¹¶è¿”å›žã€‚æ–°é“¾è¡¨æ˜¯é€šè¿‡æ‹¼æŽ¥ç»™å®šçš„ä¸¤ä¸ªé“¾è¡¨çš„æ‰€æœ‰èŠ‚ç‚¹ç»„æˆçš„ã€‚
 
 class Solution19 :public Solution {
     private:
@@ -31,7 +31,7 @@ public:
 
 	
 
-	//µÝ¹é
+	//é€’å½’
 	
 
 

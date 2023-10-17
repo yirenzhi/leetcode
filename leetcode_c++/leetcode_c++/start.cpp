@@ -8,6 +8,7 @@
 #include"code1-100/40_CombinationSumII.h"
 #include"code1-100/46_Permutations.h"
 #include"code1-100/47_PermutationsII.h"
+#include"code1-100/51_NQueen.h"
 #include"code1-100/54_SpiralMatrix.h"
 #include"code1-100/77_Combinations.h"
 #include"code1-100/78_Subsets.h"
@@ -33,6 +34,7 @@ using namespace std;
 using namespace chrono;
 #define add(a,b) a+b
 #define A(x)  Solution##x()
+#define CASE(x) case x:{return new Solution##x;}break;
 using std::cout;
 Solution* createSolution(int num)
 {
@@ -41,11 +43,13 @@ Solution* createSolution(int num)
 	{
 	// case 19: {return new Solution19(); }break;
 	case 19: {return new A(19); }break;
-	case 21: {return new Solution21; }break;
+	// CASE(21);
+	// case 21: {return new Solution21; }break;
 	case 39:{return new Solution39; }break;
 	case 40:{return new Solution40; }break;
 	case 46:{return new Solution46; }break;
 	case 47: {return new Solution47; }break;
+	CASE(51)
 	case 54: {return new Solution54; }break;
 	case 77:{return new Solution77; }break;
 	case 78:{return new Solution78; }break;

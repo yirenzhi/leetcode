@@ -1,12 +1,12 @@
 #pragma once
 #include "../base.h"
 
-/*¸ø¶¨Ò»¸ö Ã»ÓĞÖØ¸´ Êı×ÖµÄĞòÁĞ£¬·µ»ØÆäËùÓĞ¿ÉÄÜµÄÈ«ÅÅÁĞ¡£
+/*ç»™å®šä¸€ä¸ª æ²¡æœ‰é‡å¤ æ•°å­—çš„åºåˆ—ï¼Œè¿”å›å…¶æ‰€æœ‰å¯èƒ½çš„å…¨æ’åˆ—ã€‚
 
-Ê¾Àı:
+ç¤ºä¾‹:
 
-ÊäÈë: [1,2,3]
-Êä³ö:
+è¾“å…¥: [1,2,3]
+è¾“å‡º:
 [
   [1,2,3],
   [1,3,2],
@@ -37,19 +37,19 @@ public:
 	}
 
 	void dfs(vector<int> nums, int len,int depth, vector<int>& path,vector<bool>& used, vector<vector<int>>& res) {
-		//×î³õÊÇµÄdfs½ö½ö°üº¬
-		//forÑ­»·ÏÂµÄ dfs(nums, len, depth + 1, path, used, res);
-		//depthÓÃÀ´¼ÇÂ¼½øĞĞµÄ²ã¼¶ÅĞ¶ÏÊÇ·ñ½áÊø
-		//pathÓÃÀ´¼ÇÂ¼Â·¾¶£¬¼´¼ÇÂ¼´ÓÊı¶¥×ßÏÂÀ´µÄÊıÁĞ
-		//usedÓÃÀ´ÅĞ¶Ï²»Ê¹ÓÃÖØ¸´µÄÊı£¬Èç¹ûÃ»ÓĞÔòÊÇAÅÅÁĞ²»ÊÇCÅÅÁĞ
-		//resÔòÓÃÀ´´æ´¢×îºóµÄÖµ
+		//æœ€åˆæ˜¯çš„dfsä»…ä»…åŒ…å«
+		//forå¾ªç¯ä¸‹çš„ dfs(nums, len, depth + 1, path, used, res);
+		//depthç”¨æ¥è®°å½•è¿›è¡Œçš„å±‚çº§åˆ¤æ–­æ˜¯å¦ç»“æŸ
+		//pathç”¨æ¥è®°å½•è·¯å¾„ï¼Œå³è®°å½•ä»æ•°é¡¶èµ°ä¸‹æ¥çš„æ•°åˆ—
+		//usedç”¨æ¥åˆ¤æ–­ä¸ä½¿ç”¨é‡å¤çš„æ•°ï¼Œå¦‚æœæ²¡æœ‰åˆ™æ˜¯Aæ’åˆ—ä¸æ˜¯Cæ’åˆ—
+		//resåˆ™ç”¨æ¥å­˜å‚¨æœ€åçš„å€¼
 		if (len==depth)
 		{
 			//
 			res.push_back(path);
 			return;
 		}
-		//Î´¼Óused£¬ÎªAÅÅÁĞ£¬ÊıÁ¿ÎªlenµÄlen´Î·½£¬¼ÓÁËusedºóÎª½×³Ë
+		//æœªåŠ usedï¼Œä¸ºAæ’åˆ—ï¼Œæ•°é‡ä¸ºlençš„lenæ¬¡æ–¹ï¼ŒåŠ äº†usedåä¸ºé˜¶ä¹˜
 		//for (int i = 0; i < len; i++)
 		//{
 		//	path.push(nums[i]);
@@ -86,20 +86,20 @@ public:
 		{
 
 			swap(output[i], output[first]);
-			cout << "swap before:";
-			for (size_t j = 0; j <= first; j++)
-			{
-				cout << output[j] << "  ";
-			}
-			cout << endl;
+			// cout << "swap before:";
+			// for (size_t j = 0; j <= first; j++)
+			// {
+			// 	cout << output[j] << "  ";
+			// }
+			// cout << endl;
 			backtrack(res, output, first+1, len);
 			swap(output[i], output[first]);
-			cout << "swap end:   " ;
-			for (size_t j = 0; j < first; j++)
-			{
-				cout << output[j] << "  ";
-			}
-			cout << endl;
+			// cout << "swap end:   " ;
+			// for (size_t j = 0; j < first; j++)
+			// {
+			// 	cout << output[j] << "  ";
+			// }
+			// cout << endl;
 
 
 
@@ -116,12 +116,44 @@ public:
 
 	}
 
+	vector<vector<int>> m_res;
+	vector<vector<int>> permute3(vector<int>& nums) {
+		vector<int > track;
+		vector<bool > flags(nums.size(),false);
+		backtrack(nums,track,flags);
+
+		return m_res;
+	}
+
+	void backtrack(vector<int>& nums,vector<int >& track,vector<bool>& flags){
+		
+		if(nums.size()==track.size()){
+			m_res.emplace_back(track);
+			return;
+		}
+		for (auto i = 0; i < nums.size(); i++)
+		{
+			if(flags[i]){
+				continue;
+			}
+			track.emplace_back(nums[i]);
+			flags[i]=true;
+			backtrack(nums,track,flags);
+			track.pop_back();
+			flags[i]=false;
+		}
+		
 
 
-	void test()
+	}  
+
+
+	virtual void test()
 	{
-		vector<int> nums{ 0,1,0,0,9};
-		vector<vector<int>> res = permute(nums);
+		cout<<"46 test."<<endl;
+		// vector<int> nums{ 0,1,0,0,9};
+		vector<int> nums{ 1,2,3};
+		vector<vector<int>> res = permute3(nums);
 		for (size_t i = 0; i < res.size(); i++)
 		{
 			for (int j = 0; j < res[i].size(); j++)
