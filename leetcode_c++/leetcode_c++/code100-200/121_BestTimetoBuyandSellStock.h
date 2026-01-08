@@ -54,8 +54,8 @@ private:
 		return maxPrice;
 	}
 
-	//��̬�滮
-	//���� ���������洢 һ���ǵ��첻���й�Ʊ��һ���ǳ��й�Ʊ
+	//动态规划
+	//分析 用两个数存储 一个是当天不持有股票，一个是持有股票
 	int maxProfit1(vector<int>& prices) {
 		if (prices.size()<2)
 		{

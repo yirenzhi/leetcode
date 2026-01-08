@@ -2,7 +2,7 @@
 #include "../base.h"
 
 
-//102. ¶ş²æÊ÷µÄ²ãĞò±éÀú
+//102. äºŒå‰æ ‘çš„å±‚åºéå†
 class Solution102 :public Solution {
 	vector<vector<int>> levelOrder(TreeNode* root) {
 		vector<vector<int>> vecNum;
@@ -37,8 +37,8 @@ public:
 	void test()
 	{
 		/*
-		Ê¾Àı£º
-			¶ş²æÊ÷£º[3, 9, 20, null, null, 15, 7],
+		ç¤ºä¾‹ï¼š
+			äºŒå‰æ ‘ï¼š[3, 9, 20, null, null, 15, 7],
 
 			3
 			/ \

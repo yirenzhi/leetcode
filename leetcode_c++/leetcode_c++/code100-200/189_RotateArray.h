@@ -57,7 +57,7 @@ private:
 		}
 	}
 
-	//·­×ª·¨
+	//ç¿»è½¬æ³•
 	void rotate1(vector<int>& nums, int k) {
 		int len1 = nums.size();
 		if (len1==0)

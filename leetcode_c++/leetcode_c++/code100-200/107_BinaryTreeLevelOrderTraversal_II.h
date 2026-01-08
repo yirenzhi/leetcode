@@ -3,8 +3,8 @@
 #include "../base.h"
 
 
-//107. ¶ş²æÊ÷µÄ²ãĞò±éÀú  ºóµ¹Ğğ
-//102Ìâ×îºóµÄÊı×é·´×ª¼´¿ÉµÃµ½ÕâÌâµÄ´ğ°¸
+//107. äºŒå‰æ ‘çš„å±‚åºéå†  åå€’å™
+//102é¢˜æœ€åçš„æ•°ç»„åè½¬å³å¯å¾—åˆ°è¿™é¢˜çš„ç­”æ¡ˆ
 class Solution107 :public Solution {
 	vector<vector<int>> levelOrderBottom(TreeNode* root) {
 		vector<vector<int>> vecNum;
@@ -40,8 +40,8 @@ public:
 	void test()
 	{
 		/*
-		Ê¾Àı£º
-		¶ş²æÊ÷£º[3, 9, 20, null, null, 15, 7],
+		ç¤ºä¾‹ï¼š
+		äºŒå‰æ ‘ï¼š[3, 9, 20, null, null, 15, 7],
 
 		3
 		/ \

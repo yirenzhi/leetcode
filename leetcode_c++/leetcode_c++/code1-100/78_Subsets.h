@@ -1,13 +1,13 @@
 #pragma once
 /*
-¸ø¶¨Ò»×é²»º¬ÖØ¸´ÔªËØµÄÕûÊıÊı×é nums£¬·µ»Ø¸ÃÊı×éËùÓĞ¿ÉÄÜµÄ×Ó¼¯£¨Ãİ¼¯£©¡£
+ç»™å®šä¸€ç»„ä¸å«é‡å¤å…ƒç´ çš„æ•´æ•°æ•°ç»„ numsï¼Œè¿”å›è¯¥æ•°ç»„æ‰€æœ‰å¯èƒ½çš„å­é›†ï¼ˆå¹‚é›†ï¼‰ã€‚
 
-ËµÃ÷£º½â¼¯²»ÄÜ°üº¬ÖØ¸´µÄ×Ó¼¯¡£
+è¯´æ˜ï¼šè§£é›†ä¸èƒ½åŒ…å«é‡å¤çš„å­é›†ã€‚
 
-Ê¾Àı:
+ç¤ºä¾‹:
 
-ÊäÈë: nums = [1,2,3]
-Êä³ö:
+è¾“å…¥: nums = [1,2,3]
+è¾“å‡º:
 [
   [3],
   [1],
@@ -27,8 +27,8 @@ class Solution78 : public Solution
 public:
 	virtual void test()
 	{
-		vector<int> nums{ 1,2,3 };
-		vector<vector<int>> res = subsets(nums);
+		vector<int> nums{1, 2, 3};
+		vector<vector<int>> res = subsets1(nums);
 		for (size_t i = 0; i < res.size(); i++)
 		{
 			for (int j = 0; j < res[i].size(); j++)
@@ -41,9 +41,10 @@ public:
 	}
 
 private:
-	vector<vector<int>> subsets(vector<int>& nums) {
+	vector<vector<int>> subsets(vector<int> &nums)
+	{
 		vector<vector<int>> res;
-		if (nums.size()==0)
+		if (nums.size() == 0)
 		{
 			return res;
 		}
@@ -52,29 +53,50 @@ private:
 		return res;
 	}
 
-	void dfs(vector<int>& nums, int depth, vector<int>& path, vector<vector<int>>& res)
+	void dfs(vector<int> &nums, int depth, vector<int> &path, vector<vector<int>> &res)
 	{
 		res.emplace_back(path);
 		for (int i = depth; i < nums.size(); i++)
 		{
 
 			path.emplace_back(nums[i]);
-			//cout << "µİ¹éÖ®Ç° => ";
-			//for (int k = 0; k < path.size(); k++)
+			// cout << "é€’å½’ä¹‹å‰ => ";
+			// for (int k = 0; k < path.size(); k++)
 			//{
 			//	cout << path[k] << " ";
-			//}
-			//cout << "£¬i = " << i << " depth=" << depth << endl;
+			// }
+			// cout << "ï¼Œi = " << i << " depth=" << depth << endl;
 
 			dfs(nums, i + 1, path, res);
 			path.pop_back();
-			//cout << "µİ¹éÖ®ºó=> ";
-			//for (int k = 0; k < path.size(); k++)
+			// cout << "é€’å½’ä¹‹å=> ";
+			// for (int k = 0; k < path.size(); k++)
 			//{
 			//	cout << path[k] << " ";
-			//}
-			//cout << "£¬i = " << i << " depth=" << depth << endl;
+			// }
+			// cout << "ï¼Œi = " << i << " depth=" << depth << endl;
 		}
 	}
 
+	vector<vector<int>> m_res;
+
+	vector<vector<int>> subsets1(vector<int> &nums)
+	{
+		vector<int> track;
+
+		backtrack(nums,track, 0);
+		return m_res;
+	}
+
+	void backtrack(vector<int> &nums,vector<int>& track, int tag){
+		m_res.emplace_back(track);
+
+		for (auto i = tag; i < nums.size(); i++)
+		{
+			track.emplace_back(nums[i]);
+			backtrack(nums,track,i+1);
+			track.pop_back();
+		}
+		
+	}
 };

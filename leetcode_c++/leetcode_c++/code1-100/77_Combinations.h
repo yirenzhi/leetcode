@@ -1,11 +1,11 @@
 #pragma once
 /*
-¸ø¶¨Á½¸öÕûÊı n ºÍ k£¬·µ»Ø 1 ... n ÖĞËùÓĞ¿ÉÄÜµÄ k ¸öÊıµÄ×éºÏ¡£
+ç»™å®šä¸¤ä¸ªæ•´æ•° n å’Œ kï¼Œè¿”å› 1 ... n ä¸­æ‰€æœ‰å¯èƒ½çš„ k ä¸ªæ•°çš„ç»„åˆã€‚
 
-Ê¾Àı:
+ç¤ºä¾‹:
 
-ÊäÈë:n = 4, k = 2
-Êä³ö:
+è¾“å…¥:n = 4, k = 2
+è¾“å‡º:
 [
   [2,4],
   [3,4],
@@ -22,7 +22,7 @@ class Solution77 : public Solution
 public:
 	virtual void test()
 	{
-		vector<vector<int>> res = combine(4, 2);
+		vector<vector<int>> res = combine1(4, 2);
 		for (size_t i = 0; i < res.size(); i++)
 		{
 			for (int j = 0; j < res[i].size(); j++)
@@ -33,9 +33,11 @@ public:
 			cout << endl;
 		}
 	}
+
 private:
 	int target;
-	vector<vector<int>> combine(int n, int k) {
+	vector<vector<int>> combine(int n, int k)
+	{
 		target = k;
 		vector<vector<int>> res;
 		vector<int> path;
@@ -44,77 +46,73 @@ private:
 		return res;
 	}
 
-
-
-	void dfs(int n, int depth, vector<int>& path, vector<vector<int>>& res)
+	void dfs(int n, int depth, vector<int> &path, vector<vector<int>> &res)
 	{
-		if (path.size()==target)
+		if (path.size() == target)
 		{
 			cout << " depth=" << depth << endl;
 
 			res.emplace_back(path);
 			return;
 		}
-//		for (int i = depth; i <= n; i++)
-		//ËÑË÷ÆğµãµÄÉÏ½ì+½ÓÏÂÀ´ÒªÑ¡ÔñµÄÔªËØ¸öÊı-1=n
-		//ÉÏ½ì+(k-path.size())-1=n
-		//ÉÏ½ì=n-(k-path.size())+1
-		for (int i=depth;i<=n-(target-path.size())+1;i++)
+		//		for (int i = depth; i <= n; i++)
+		// æœç´¢èµ·ç‚¹çš„ä¸Šå±Š+æ¥ä¸‹æ¥è¦é€‰æ‹©çš„å…ƒç´ ä¸ªæ•°-1=n
+		// ä¸Šå±Š+(k-path.size())-1=n
+		// ä¸Šå±Š=n-(k-path.size())+1
+		for (int i = depth; i <= n - (target - path.size()) + 1; i++)
 		{
-			//if (i-depth==n-target+1)
+			// if (i-depth==n-target+1)
 			//{
 			//	break;
-			//}
+			// }
 			path.emplace_back(i);
-			cout << "µİ¹éÖ®Ç° => ";
+			cout << "é€’å½’ä¹‹å‰ => ";
 			for (int k = 0; k < path.size(); k++)
 			{
 				cout << path[k] << " ";
 			}
-			cout << "£¬i = " << i<<" depth="<<depth << endl;
+			cout << "ï¼Œi = " << i << " depth=" << depth << endl;
 
 			dfs(n, i + 1, path, res);
 			path.pop_back();
-			cout << "µİ¹éÖ®ºó=> ";
+			cout << "é€’å½’ä¹‹å=> ";
 			for (int k = 0; k < path.size(); k++)
 			{
 				cout << path[k] << " ";
 			}
-			cout << "£¬i = " << i << " depth=" << depth << endl;
+			cout << "ï¼Œi = " << i << " depth=" << depth << endl;
 		}
 	}
-	//vector<vector<int>> combine(int n, int k) {
-	//	target = k;
-	//	vector<int> candidates;
-	//	for (int i = 0; i < n; i++)
-	//	{
-	//		candidates.emplace_back(i + 1);
-	//	}
-	//	vector<vector<int>> res;
-	//	vector<int> path;
-	//	dfs(candidates, 0, path, res);
+	vector<vector<int>> m_res;
 
-	//	return res;
-	//}
+	vector<vector<int>> combine1(int n, int k)
+	{
+		vector<int> nums;
+		for (auto i = 1; i <= n; i++)
+		{
+			nums.emplace_back(i);
+		}
 
+		vector<int> track;
+		vector<bool> flags(n, false);
 
+		backtrack(nums, track,  k,0);
+		return m_res;
+	}
 
-	//void dfs(vector<int>& candidates, int depth, vector<int>& path, vector<vector<int>>& res)
-	//{
-	//	if (path.size() == target)
-	//	{
-	//		res.emplace_back(path);
-	//		return;
-	//	}
-	//	for (int i = depth; i < candidates.size(); i++)
-	//	{
-	//		//if (path.size() > 0 && path[path.size() - 1] >= candidates[i])
-	//		//{
-	//		//	continue;
-	//		//}
-	//		path.emplace_back(candidates[i]);
-	//		dfs(candidates, i + 1, path, res);
-	//		path.pop_back();
-	//	}
-	//}
+	void backtrack(vector<int> &nums, vector<int> &track, int k, int tag)
+	{
+		if (track.size() == k)
+		{
+			m_res.emplace_back(track);
+			return;
+		}
+
+		for (auto i = tag; i < nums.size(); i++)
+		{
+			track.emplace_back(nums[i]);
+			backtrack(nums, track,k,i+1);
+			track.pop_back();
+		}
+	}
 };

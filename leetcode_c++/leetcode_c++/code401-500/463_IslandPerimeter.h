@@ -1,24 +1,24 @@
 #pragma once
 
 /*
-463. µºÓìµÄÖÜ³¤
-¸ø¶¨Ò»¸ö°üº¬ 0 ºÍ 1 µÄ¶þÎ¬Íø¸ñµØÍ¼£¬ÆäÖÐ 1 ±íÊ¾Â½µØ 0 ±íÊ¾Ë®Óò¡£
+463. å²›å±¿çš„å‘¨é•¿
+ç»™å®šä¸€ä¸ªåŒ…å« 0 å’Œ 1 çš„äºŒç»´ç½‘æ ¼åœ°å›¾ï¼Œå…¶ä¸­ 1 è¡¨ç¤ºé™†åœ° 0 è¡¨ç¤ºæ°´åŸŸã€‚
 
-Íø¸ñÖÐµÄ¸ñ×ÓË®Æ½ºÍ´¹Ö±·½ÏòÏàÁ¬£¨¶Ô½ÇÏß·½Ïò²»ÏàÁ¬£©¡£Õû¸öÍø¸ñ±»Ë®ÍêÈ«°üÎ§£¬µ«ÆäÖÐÇ¡ºÃÓÐÒ»¸öµºÓì£¨»òÕßËµ£¬Ò»¸ö»ò¶à¸ö±íÊ¾Â½µØµÄ¸ñ×ÓÏàÁ¬×é³ÉµÄµºÓì£©¡£
+ç½‘æ ¼ä¸­çš„æ ¼å­æ°´å¹³å’Œåž‚ç›´æ–¹å‘ç›¸è¿žï¼ˆå¯¹è§’çº¿æ–¹å‘ä¸ç›¸è¿žï¼‰ã€‚æ•´ä¸ªç½‘æ ¼è¢«æ°´å®Œå…¨åŒ…å›´ï¼Œä½†å…¶ä¸­æ°å¥½æœ‰ä¸€ä¸ªå²›å±¿ï¼ˆæˆ–è€…è¯´ï¼Œä¸€ä¸ªæˆ–å¤šä¸ªè¡¨ç¤ºé™†åœ°çš„æ ¼å­ç›¸è¿žç»„æˆçš„å²›å±¿ï¼‰ã€‚
 
-µºÓìÖÐÃ»ÓÐ¡°ºþ¡±£¨¡°ºþ¡± Ö¸Ë®ÓòÔÚµºÓìÄÚ²¿ÇÒ²»ºÍµºÓìÖÜÎ§µÄË®ÏàÁ¬£©¡£¸ñ×ÓÊÇ±ß³¤Îª 1 µÄÕý·½ÐÎ¡£Íø¸ñÎª³¤·½ÐÎ£¬ÇÒ¿í¶ÈºÍ¸ß¶È¾ù²»³¬¹ý 100 ¡£¼ÆËãÕâ¸öµºÓìµÄÖÜ³¤¡£
+å²›å±¿ä¸­æ²¡æœ‰â€œæ¹–â€ï¼ˆâ€œæ¹–â€ æŒ‡æ°´åŸŸåœ¨å²›å±¿å†…éƒ¨ä¸”ä¸å’Œå²›å±¿å‘¨å›´çš„æ°´ç›¸è¿žï¼‰ã€‚æ ¼å­æ˜¯è¾¹é•¿ä¸º 1 çš„æ­£æ–¹å½¢ã€‚ç½‘æ ¼ä¸ºé•¿æ–¹å½¢ï¼Œä¸”å®½åº¦å’Œé«˜åº¦å‡ä¸è¶…è¿‡ 100 ã€‚è®¡ç®—è¿™ä¸ªå²›å±¿çš„å‘¨é•¿ã€‚
 
 
 
-Ê¾Àý :
+ç¤ºä¾‹ :
 
-ÊäÈë:
+è¾“å…¥:
 [[0,1,0,0],
  [1,1,1,0],
  [0,1,0,0],
  [1,1,0,0]]
 
-Êä³ö: 16
+è¾“å‡º: 16
 */
 
 #include "../base.h"
@@ -60,27 +60,27 @@ private:
 	int cacultateLength(vector<vector<int>>& grid, int x, int y)
 	{
 		int length = 0;
-		//¼ÆËãÕâ¸öµãµÄËÄÖÜÓÐÃ»ÓÐÆäËûµã£¬Ã»ÓÐÔò¼Ó1£¬ÓÐÔò²»¼Ó
+		//è®¡ç®—è¿™ä¸ªç‚¹çš„å››å‘¨æœ‰æ²¡æœ‰å…¶ä»–ç‚¹ï¼Œæ²¡æœ‰åˆ™åŠ 1ï¼Œæœ‰åˆ™ä¸åŠ 
 		int curX = 0, curY = 0;
-		//×ó
+		//å·¦
 		curX = x , curY = y-1;
 		if (curY<0||grid[curX][curY]==0)
 		{
 			length += 1;
 		}
-		//ÓÒ
+		//å³
 		curX = x, curY = y+1;
 		if (curY >= grid[curX].size() || grid[curX][curY] == 0)
 		{
 			length += 1;
 		}
-		//ÉÏ
+		//ä¸Š
 		curX = x - 1, curY = y;
 		if (curX < 0 || grid[curX][curY] == 0)
 		{
 			length += 1;
 		}
-		//ÏÂ
+		//ä¸‹
 		curX = x + 1, curY = y;
 		if (curX >= grid.size() || grid[curX][curY] == 0)
 		{

@@ -1,0 +1,6 @@
+使用方式：
+cd leetcode_c++/leetcode_c++ 
+xmake run start
+或者
+g++ start.cpp -o start
+然后执行 start

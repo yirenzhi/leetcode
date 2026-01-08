@@ -86,7 +86,7 @@ extern void testif();
 extern void teststring();
 void testVar();
 
-//²âÊÔsqlite
+//æµ‹è¯•sqlite
 void testSqlite();
 
 int main()
@@ -97,12 +97,12 @@ int main()
 // 
 // 	}
 
-	//²âÊÔÏß³Ì
+	//æµ‹è¯•çº¿ç¨‹
 //	testThread::runThread3();
 
 	//cout<<jiecheng(5)<<endl;
 
-	//cout<<"ÇëÊäÈëººÅµËşµÄ²ãÊı:";
+	//cout<<"è¯·è¾“å…¥æ±‰è¯ºå¡”çš„å±‚æ•°:";
 	//int a;
 	//cin>>a;
 	//hannoi(a,'A','B','C');
@@ -110,28 +110,28 @@ int main()
 
 	//feibona(5);
 
-	//²âÊÔÁ´±í
+	//æµ‹è¯•é“¾è¡¨
 	//int nums[]={0,1,2,3,4};
-	//cout<<"Êı×é³¤¶ÈÎª£º"<<sizeof(nums)/sizeof(int)<<endl;
+	//cout<<"æ•°ç»„é•¿åº¦ä¸ºï¼š"<<sizeof(nums)/sizeof(int)<<endl;
 	//linkList list1= initlinkList(nums,sizeof(nums)/sizeof(int));
 	//printLink(list1);
 
 	//int len =0;
-	//cout<<"µİ¹é·¨ÇóÁ´±í³¤¶ÈÎª:"<<getlengthRecursion(list1)<<endl;
+	//cout<<"é€’å½’æ³•æ±‚é“¾è¡¨é•¿åº¦ä¸º:"<<getlengthRecursion(list1)<<endl;
 
-	//cout<<"Î²µİ¹éÇóÁ´±í³¤¶ÈÎª:"<<getlengthTailRecursion(list1,&len)<<endl;
+	//cout<<"å°¾é€’å½’æ±‚é“¾è¡¨é•¿åº¦ä¸º:"<<getlengthTailRecursion(list1,&len)<<endl;
 
-	//string µÄ³¤¶ÈÎª28
+	//string çš„é•¿åº¦ä¸º28
 	//string menus[] = {"new","start","regret"};
-	//cout<<"³¤¶È"<<sizeof(menus)<<endl;
-	//cout<<"³¤¶È"<<sizeof(menus[0])<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(menus)<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(menus[0])<<endl;
 	//string str = "012345678901234567890123456789012345678901234567890123456789";
 	//string *p=&str;
-	//cout<<"³¤¶È"<<sizeof(str)<<endl;
-	//cout<<"³¤¶È"<<strlen(str.c_str())<<endl;
-	//cout<<"³¤¶È"<<sizeof(string)<<endl;
-	//cout<<"³¤¶È"<<sizeof(&str)<<endl;
-	//cout<<"³¤¶È"<<sizeof(struct fle)<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(str)<<endl;
+	//cout<<"é•¿åº¦"<<strlen(str.c_str())<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(string)<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(&str)<<endl;
+	//cout<<"é•¿åº¦"<<sizeof(struct fle)<<endl;
 	
 
 	//stdForeach();

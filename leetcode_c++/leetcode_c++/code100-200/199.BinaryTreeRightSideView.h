@@ -1,9 +1,9 @@
 #pragma once
 #include "../base.h"
 
-//����һ�ö������������Լ�վ�������Ҳ࣬���մӶ������ײ���˳�򣬷��ش��Ҳ����ܿ����Ľڵ�ֵ��
+//给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。
 class Solution199 :public Solution{
-	//bfs����  ���ö���ȡ��ÿ������֣�Ȼ��ÿ�����һ��Ԫ���ռ�����Ϊ���ұ�Ԫ��
+	//bfs方法  利用队列取出每层的数字，然后将每层最后一个元素收集，即为最右边元素
 	vector<int> rightSideView(TreeNode* root) {
 		vector<int> vecNum;
 		if (!root)
@@ -46,7 +46,7 @@ public:
 
 		vector<int> nums;
 		nums = rightSideView(root);
-		cout << "����һ�ö������������Լ�վ�������Ҳ࣬���մӶ������ײ���˳�򣬷��ش��Ҳ����ܿ����Ľڵ�ֵ��" << endl;
+		cout << "给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。" << endl;
 		for (size_t i = 0; i < nums.size(); i++)
 		{
 			cout << nums[i] << "   ";

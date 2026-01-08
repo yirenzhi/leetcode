@@ -23,10 +23,12 @@
 #include"code201-300/234_PalindromeLinkedList.h"
 #include"code401-500/463_IslandPerimeter.h"
 #include"code501-600/509_FibonacciNumber.h"
+#include"code701-800/752_OpenLock.h"
 #include"code801-900/860_LemonadeChange.h"
 #include"code801-900/876_MiddleoftheLinkedList.h"
 #include"code801-900/830_PositionsofLargeGroups.h"
 #include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
+#include"code2501-2600/2530_Maximal_Score_After_Applying_K_Operations.h"
 #include <sstream>
 #include<fstream>
 #include<algorithm>
@@ -64,10 +66,12 @@ Solution* createSolution(int num)
 	case 234:{return new Solution234; }break;
 	case 463: {return new Solution463; }break;
 	case 509: {return new Solution509; }break;
+	CASE(752)
 	case 830: {return new Solution830; }break;
 	case 860: {return new Solution860; }break;
 	case 876:{return new Solution876; }break;
 	case 1365:{return new Solution1365; }break;
+	CASE(2530)
 	default:
 		break;
 	}
@@ -123,7 +127,7 @@ int main()
 	//long aa = 1000;
 	//cout << Solution1365::anyToString(aa) << endl;
 
-	std::cout<< "a" "b"<<std::endl;
+	std::cout<< "请输入题目编号,输入0跳出循环"<<std::endl;
 
 	while (true)
 	{

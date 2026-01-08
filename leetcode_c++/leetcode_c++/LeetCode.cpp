@@ -68,7 +68,7 @@ string LeetCode::leetcode3(string str)
 	return longstr;
 }
 
-//³¬¼¶Ìì²ÅµÄËã·¨ so beautiful
+//è¶…çº§å¤©æ‰çš„ç®—æ³• so beautiful
 int LeetCode::leetcode3_(string str)
 {
 	std::vector<int > dict(256,-1);

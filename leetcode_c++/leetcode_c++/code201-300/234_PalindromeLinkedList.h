@@ -21,14 +21,14 @@ private:
 		{
 			return true;
 		}
-		//ÓÃ¿ìÂýÖ¸ÕëÕÒÖÐ¼ä½Úµã
+		//ç”¨å¿«æ…¢æŒ‡é’ˆæ‰¾ä¸­é—´èŠ‚ç‚¹
 		ListNode* middle = middleNode(head);
 
-		//»ñÈ¡²¢·´×ªµÚ¶þ¶ÎÁ´±í
+		//èŽ·å–å¹¶åè½¬ç¬¬äºŒæ®µé“¾è¡¨
 		ListNode* node2 = middle->next;
 		node2 = reverseList(node2);
 
-		//±È½ÏÁ´±í
+		//æ¯”è¾ƒé“¾è¡¨
 		return compareList(head, node2);
 	}
 	bool compareList(ListNode* node1, ListNode* node2)
@@ -48,7 +48,7 @@ private:
 	ListNode* middleNode(ListNode* head) {
 		ListNode* node1 = head;
 		ListNode* node2 = head;
-		while (node2->next != NULL && node2->next->next != NULL)//ÕÒµÄÊÇÆ«×óµÄÂýÖ¸Õë
+		while (node2->next != NULL && node2->next->next != NULL)//æ‰¾çš„æ˜¯åå·¦çš„æ…¢æŒ‡é’ˆ
 		{
 			node1 = node1->next;
 			node2 = node2->next->next;
