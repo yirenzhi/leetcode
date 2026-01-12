@@ -29,6 +29,7 @@
 #include"code801-900/830_PositionsofLargeGroups.h"
 #include"1301-1400/1365_HowManyNumbersAreSmallerThantheCurrentNumber.h"
 #include"code2501-2600/2530_Maximal_Score_After_Applying_K_Operations.h"
+#include"AdventureMode/data_structures/shuzu2_1.h"
 #include <sstream>
 #include<fstream>
 #include<algorithm>
@@ -43,37 +44,38 @@ Solution* createSolution(int num)
 	// return new A(num);
 	switch (num)
 	{
-	// case 19: {return new Solution19(); }break;
-	case 19: {return new A(19); }break;
-	// CASE(21);
-	// case 21: {return new Solution21; }break;
-	case 39:{return new Solution39; }break;
-	case 40:{return new Solution40; }break;
-	case 46:{return new Solution46; }break;
-	case 47: {return new Solution47; }break;
-	CASE(51)
-	case 54: {return new Solution54; }break;
-	case 77:{return new Solution77; }break;
-	case 78:{return new Solution78; }break;
-	case 90:{return new Solution90; }break;
-	case 102:{return new Solution102; }break;
-	case 107: {return new Solution107; }break;
-	case 121: {return new Solution121; }break;
-	case 143: {return new Solution143; }break;
-	case 189: {return new Solution189; }break;
-	case 199:{return new Solution199; }break;
-	case 206:{return new Solution206; }break;
-	case 234:{return new Solution234; }break;
-	case 463: {return new Solution463; }break;
-	case 509: {return new Solution509; }break;
-	CASE(752)
-	case 830: {return new Solution830; }break;
-	case 860: {return new Solution860; }break;
-	case 876:{return new Solution876; }break;
-	case 1365:{return new Solution1365; }break;
-	CASE(2530)
-	default:
-		break;
+		case -5: {return new Solution_5; }break;
+		// case 19: {return new Solution19(); }break;
+		case 19: {return new A(19); }break;
+		// CASE(21);
+		// case 21: {return new Solution21; }break;
+		case 39:{return new Solution39; }break;
+		case 40:{return new Solution40; }break;
+		case 46:{return new Solution46; }break;
+		case 47: {return new Solution47; }break;
+		CASE(51)
+		case 54: {return new Solution54; }break;
+		case 77:{return new Solution77; }break;
+		case 78:{return new Solution78; }break;
+		case 90:{return new Solution90; }break;
+		case 102:{return new Solution102; }break;
+		case 107: {return new Solution107; }break;
+		case 121: {return new Solution121; }break;
+		case 143: {return new Solution143; }break;
+		case 189: {return new Solution189; }break;
+		case 199:{return new Solution199; }break;
+		case 206:{return new Solution206; }break;
+		case 234:{return new Solution234; }break;
+		case 463: {return new Solution463; }break;
+		case 509: {return new Solution509; }break;
+		CASE(752)
+		case 830: {return new Solution830; }break;
+		case 860: {return new Solution860; }break;
+		case 876:{return new Solution876; }break;
+		case 1365:{return new Solution1365; }break;
+		CASE(2530)
+		default:
+			break;
 	}
 	return NULL;
 }
@@ -127,7 +129,6 @@ int main()
 	//long aa = 1000;
 	//cout << Solution1365::anyToString(aa) << endl;
 
-	std::cout<< "请输入题目编号,输入0跳出循环"<<std::endl;
 
 	while (true)
 	{
