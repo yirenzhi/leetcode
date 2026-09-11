@@ -181,3 +181,5 @@ candidates 中的数字可以无限制重复被选取。
   [3,5]
 ]
 */
+
+REGISTER_SOLUTION(39, Solution39)

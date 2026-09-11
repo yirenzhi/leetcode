@@ -76,3 +76,5 @@ private:
 		}
 	}
 };
+
+REGISTER_SOLUTION(90, Solution90)

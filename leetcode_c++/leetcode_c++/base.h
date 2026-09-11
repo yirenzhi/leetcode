@@ -88,8 +88,26 @@ class Solution
 {
 public:
 	virtual void test() = 0;
+	virtual ~Solution() = default;
 
-private:
-
+	// 题目自注册：每个 .h 末尾调用 REGISTER_SOLUTION(题号, 类名)
+	using Creator = Solution* (*)();
+	static std::map<int, Creator>& registry() {
+		static std::map<int, Creator> r;
+		return r;
+	}
+	static Solution* create(int num) {
+		auto& r = registry();
+		auto it = r.find(num);
+		return it == r.end() ? nullptr : it->second();
+	}
 };
+
+// 题目自注册宏：放在 .h 文件末尾，class 定义之后。
+// 例：REGISTER_SOLUTION(509, Solution509)
+// 副作用初始化在 main 之前完成，create(num) 即可取到。
+#define REGISTER_SOLUTION(num, ClassName)                                   \
+	static Solution* __make_##ClassName() { return new ClassName(); }       \
+	static const bool __reg_##ClassName =                                   \
+		(Solution::registry()[num] = &__make_##ClassName, true);
 

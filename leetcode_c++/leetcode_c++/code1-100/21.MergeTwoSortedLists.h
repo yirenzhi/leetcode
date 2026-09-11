@@ -84,3 +84,5 @@ public:
 
 
 };
+
+REGISTER_SOLUTION(21, Solution21)

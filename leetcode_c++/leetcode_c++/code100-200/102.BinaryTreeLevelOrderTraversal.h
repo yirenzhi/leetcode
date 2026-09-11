@@ -68,3 +68,5 @@ public:
 
 	}
 };
+
+REGISTER_SOLUTION(102, Solution102)

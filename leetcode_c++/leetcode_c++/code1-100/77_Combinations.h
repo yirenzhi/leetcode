@@ -116,3 +116,5 @@ private:
 		}
 	}
 };
+
+REGISTER_SOLUTION(77, Solution77)

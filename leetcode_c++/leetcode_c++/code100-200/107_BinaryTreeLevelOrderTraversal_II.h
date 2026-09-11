@@ -72,3 +72,5 @@ public:
 
 	}
 };
+
+REGISTER_SOLUTION(107, Solution107)

@@ -125,3 +125,5 @@ public:
 private:
 
 };
+
+REGISTER_SOLUTION(47, Solution47)

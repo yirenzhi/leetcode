@@ -85,3 +85,5 @@ candidates 中的每个数字在每个组合中只能使用一次。
 
 
 */
+
+REGISTER_SOLUTION(40, Solution40)

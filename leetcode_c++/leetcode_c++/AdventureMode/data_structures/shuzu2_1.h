@@ -73,3 +73,5 @@ public:
         return ans;
     }
 };
+
+REGISTER_SOLUTION(-5, Solution_5)

@@ -100,3 +100,5 @@ private:
 		
 	}
 };
+
+REGISTER_SOLUTION(78, Solution78)

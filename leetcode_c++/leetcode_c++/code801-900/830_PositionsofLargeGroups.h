@@ -80,3 +80,5 @@ private:
 		return result;
 	}
 };
+
+REGISTER_SOLUTION(830, Solution830)

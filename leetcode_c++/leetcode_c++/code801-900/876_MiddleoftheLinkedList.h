@@ -62,3 +62,5 @@ private:
 		return node1;
 	}
 };
+
+REGISTER_SOLUTION(876, Solution876)

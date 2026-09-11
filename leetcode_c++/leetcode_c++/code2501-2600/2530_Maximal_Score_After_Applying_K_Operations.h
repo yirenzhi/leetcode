@@ -45,3 +45,5 @@ private:
 
     }
 };
+
+REGISTER_SOLUTION(2530, Solution2530)

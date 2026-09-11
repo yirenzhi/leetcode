@@ -34,3 +34,5 @@ private:
 
 	
 };
+
+REGISTER_SOLUTION(704, Solution704)

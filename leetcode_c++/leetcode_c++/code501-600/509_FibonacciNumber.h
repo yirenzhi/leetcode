@@ -25,3 +25,5 @@ private:
 		}
 	}
 };
+
+REGISTER_SOLUTION(509, Solution509)

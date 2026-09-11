@@ -124,3 +124,5 @@ std::string Solution1365::anyToString(T a)
 	oss << a;
 	return oss.str();
 }
+
+REGISTER_SOLUTION(1365, Solution1365)

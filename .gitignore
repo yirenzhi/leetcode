@@ -4,3 +4,13 @@
 /leetcode_c++/leetcode_c++/Debug
 x64/
 /leetcode_c++/enc_temp_folder
+.trae/
+
+# xmake 构建产物
+**/.xmake/
+**/build/
+
+# 编译中间产物与可执行文件
+*.o
+/leetcode_c++/leetcode_c++/start
+/leetcode_c++/leetcode_c++/all_problems.h

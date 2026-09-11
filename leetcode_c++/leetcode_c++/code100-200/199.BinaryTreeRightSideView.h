@@ -55,3 +55,5 @@ public:
 
 	}
 };
+
+REGISTER_SOLUTION(199, Solution199)

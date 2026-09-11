@@ -91,3 +91,5 @@ private:
 		return matrix;
 	}
 };
+
+REGISTER_SOLUTION(54, Solution54)

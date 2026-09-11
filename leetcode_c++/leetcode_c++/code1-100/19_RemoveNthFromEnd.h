@@ -48,3 +48,5 @@ public:
 
 
 };
+
+REGISTER_SOLUTION(19, Solution19)
